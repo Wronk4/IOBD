@@ -1,0 +1,162 @@
+.cs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.cs-section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 32px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.cs-section-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.cs-carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.cs-carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.cs-service-card {
+    min-width: 300px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cs-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cs-card-content {
+    padding: 20px;
+}
+
+.cs-service-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.cs-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #f39c12;
+}
+
+.cs-star, .cs-star-half {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    background-size: contain;
+}
+
+.cs-star {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23f39c12' stroke='%23f39c12' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'%3E%3C/polygon%3E%3C/svg%3E");
+}
+
+.cs-star-half {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23f39c12' stroke='%23f39c12' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 17.77L18.18 21.02L16.99 14.14L22 9.27L15.09 8.26L12 2V17.77Z'%3E%3C/path%3E%3C/svg%3E");
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.cs-rating-value {
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cs-address {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.cs-category {
+    display: inline-block;
+    background-color: #e0f7fa;
+    color: #00838f;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cs-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.cs-carousel-btn:hover {
+    background: #3498db;
+}
+
+.cs-carousel-btn:hover svg {
+    stroke: white;
+}
+
+.cs-prev-btn {
+    left: 10px;
+}
+
+.cs-next-btn {
+    right: 10px;
+}
+
+.cs-carousel-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #2c3e50;
+    transition: stroke 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .cs-service-card {
+        min-width: 250px;
+    }
+}

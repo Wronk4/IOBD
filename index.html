@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="featured.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="search-container">
+            <input type="text" placeholder="Wyszukaj...">
+        </div>
+        
+        <div class="nav-right">
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-login">Zaloguj się</a>
+                <a href="#" class="btn btn-register">Zarejestruj się</a>
+            </div>
+            <div class="avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+
+    <h2 class="cs-section-title">Kategorie</h2>
+
+    <div class="container">
+        
+        <div class="categories-container">
+            <div class="nav-button prev-button small">
+                <i class="arrow left"></i>
+            </div>
+            
+            <div class="categories-slider">
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Fryzjer">
+                    </div>
+                    <div class="category-name">Fryzjer</div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Tatuażysta">
+                    </div>
+                    <div class="category-name">Tatuażysta</div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Makijaż">
+                    </div>
+                    <div class="category-name">Makijaż</div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Manicure">
+                    </div>
+                    <div class="category-name">Manicure</div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Masaż">
+                    </div>
+                    <div class="category-name">Masaż</div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Kosmetyczka">
+                    </div>
+                    <div class="category-name">Kosmetyczka</div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Barber">
+                    </div>
+                    <div class="category-name">Barber</div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Stylizacja rzęs">
+                    </div>
+                    <div class="category-name">Stylizacja rzęs</div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-image">
+                        <img src="/api/placeholder/120/120" alt="Trener personalny">
+                    </div>
+                    <div class="category-name">Trener personalny</div>
+                </div>
+            </div>
+            
+            <div class="nav-button next-button small">
+                <i class="arrow right"></i>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="cs-section-title">Wyróżnione</h2>
+
+    <div class="slider-container">
+        <button class="nav-button prev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        
+        <div class="card">
+            <div class="card-image">
+                <img src="/api/placeholder/600/800" alt="Masaż relaksacyjny">
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Masaż relaksacyjny całego ciała</h2>
+                
+                <div class="card-calendar">
+                    <div class="calendar-month">Kwiecień 2025</div>
+                    <div class="calendar-grid">
+                        <div class="calendar-weekday">Pon</div>
+                        <div class="calendar-weekday">Wt</div>
+                        <div class="calendar-weekday">Śr</div>
+                        <div class="calendar-weekday">Czw</div>
+                        <div class="calendar-weekday">Pt</div>
+                        <div class="calendar-weekday">Sob</div>
+                        <div class="calendar-weekday">Nd</div>
+                        
+                        <div class="calendar-day unavailable">1</div>
+                        <div class="calendar-day unavailable">2</div>
+                        <div class="calendar-day unavailable">3</div>
+                        <div class="calendar-day unavailable">4</div>
+                        <div class="calendar-day unavailable">5</div>
+                        <div class="calendar-day unavailable">6</div>
+                        <div class="calendar-day unavailable">7</div>
+                        
+                        <div class="calendar-day unavailable">8</div>
+                        <div class="calendar-day unavailable">9</div>
+                        <div class="calendar-day available">10</div>
+                        <div class="calendar-day available">11</div>
+                        <div class="calendar-day unavailable">12</div>
+                        <div class="calendar-day unavailable">13</div>
+                        <div class="calendar-day unavailable">14</div>
+                        
+                        <div class="calendar-day unavailable">15</div>
+                        <div class="calendar-day available">16</div>
+                        <div class="calendar-day available">17</div>
+                        <div class="calendar-day unavailable">18</div>
+                        <div class="calendar-day unavailable">19</div>
+                        <div class="calendar-day unavailable">20</div>
+                        <div class="calendar-day unavailable">21</div>
+                        
+                        <div class="calendar-day available">22</div>
+                        <div class="calendar-day available">23</div>
+                        <div class="calendar-day unavailable">24</div>
+                        <div class="calendar-day unavailable">25</div>
+                        <div class="calendar-day available">26</div>
+                        <div class="calendar-day available">27</div>
+                        <div class="calendar-day unavailable">28</div>
+                        
+                        <div class="calendar-day available">29</div>
+                        <div class="calendar-day available">30</div>
+                    </div>
+                    <div class="calendar-legend">
+                        <div class="legend-item">
+                            <div class="legend-color legend-available"></div>
+                            <span>Dostępne terminy</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color legend-unavailable"></div>
+                            <span>Zajęte terminy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="card-description">
+                    Masaż relaksacyjny całego ciała to wyjątkowy zabieg, który pozwala na głębokie odprężenie i redukcję napięcia mięśniowego. Sesja trwa 60 minut i obejmuje plecy, ramiona, nogi oraz stopy.
+                </p>
+                
+                <div class="card-details">
+                    <div class="card-price">249 zł / 60 min</div>
+                    <button class="card-button">Zarezerwuj termin</button>
+                </div>
+            </div>
+        </div>
+        
+        <button class="nav-button next">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+    </div>
+
+
+    <h2 class="cs-section-title">Promocje</h2>
+
+    <div class="cs-container">
+    
+        <div class="cs-carousel">
+          <button class="cs-carousel-btn cs-prev-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#2c3e50"></polyline></svg>
+          </button>
+    
+          <div class="cs-carousel-container">
+            <div class="cs-service-card">
+              <img src="/api/placeholder/400/200" alt="Restauracja Pod Złotym Jabłkiem" class="cs-card-img">
+              <div class="cs-card-content">
+                <h3 class="cs-service-name">Restauracja Pod Złotym Jabłkiem</h3>
+                <div class="cs-rating">
+                  <span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star-half"></span>
+                  <span class="cs-rating-value">4.5</span>
+                </div>
+                <p class="cs-address">ul. Krakowska 15, 00-001 Warszawa</p>
+                <span class="cs-category">Gastronomia</span>
+              </div>
+            </div>
+    
+            <div class="cs-service-card">
+              <img src="/api/placeholder/400/200" alt="Studio Fryzjerskie Glamour" class="cs-card-img">
+              <div class="cs-card-content">
+                <h3 class="cs-service-name">Studio Fryzjerskie Glamour</h3>
+                <div class="cs-rating">
+                  <span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span>
+                  <span class="cs-rating-value">5.0</span>
+                </div>
+                <p class="cs-address">ul. Nowowiejska 8, 00-665 Warszawa</p>
+                <span class="cs-category">Fryzjerstwo</span>
+              </div>
+            </div>
+
+            <div class="cs-service-card">
+                <img src="/api/placeholder/400/200" alt="Studio Fryzjerskie Glamour" class="cs-card-img">
+                <div class="cs-card-content">
+                  <h3 class="cs-service-name">Studio Fryzjerskie Glamour</h3>
+                  <div class="cs-rating">
+                    <span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span>
+                    <span class="cs-rating-value">5.0</span>
+                  </div>
+                  <p class="cs-address">ul. Nowowiejska 8, 00-665 Warszawa</p>
+                  <span class="cs-category">Fryzjerstwo</span>
+                </div>
+              </div>
+
+              <div class="cs-service-card">
+                <img src="/api/placeholder/400/200" alt="Studio Fryzjerskie Glamour" class="cs-card-img">
+                <div class="cs-card-content">
+                  <h3 class="cs-service-name">Studio Fryzjerskie Glamour</h3>
+                  <div class="cs-rating">
+                    <span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span>
+                    <span class="cs-rating-value">5.0</span>
+                  </div>
+                  <p class="cs-address">ul. Nowowiejska 8, 00-665 Warszawa</p>
+                  <span class="cs-category">Fryzjerstwo</span>
+                </div>
+              </div>
+
+              <div class="cs-service-card">
+                <img src="/api/placeholder/400/200" alt="Studio Fryzjerskie Glamour" class="cs-card-img">
+                <div class="cs-card-content">
+                  <h3 class="cs-service-name">Studio Fryzjerskie Glamour</h3>
+                  <div class="cs-rating">
+                    <span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span>
+                    <span class="cs-rating-value">5.0</span>
+                  </div>
+                  <p class="cs-address">ul. Nowowiejska 8, 00-665 Warszawa</p>
+                  <span class="cs-category">Fryzjerstwo</span>
+                </div>
+              </div>
+
+              <div class="cs-service-card">
+                <img src="/api/placeholder/400/200" alt="Studio Fryzjerskie Glamour" class="cs-card-img">
+                <div class="cs-card-content">
+                  <h3 class="cs-service-name">Studio Fryzjerskie Glamour</h3>
+                  <div class="cs-rating">
+                    <span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span>
+                    <span class="cs-rating-value">5.0</span>
+                  </div>
+                  <p class="cs-address">ul. Nowowiejska 8, 00-665 Warszawa</p>
+                  <span class="cs-category">Fryzjerstwo</span>
+                </div>
+              </div>
+    
+            <div class="cs-service-card">
+              <img src="/api/placeholder/400/200" alt="Auto Serwis TurboMax" class="cs-card-img">
+              <div class="cs-card-content">
+                <h3 class="cs-service-name">Auto Serwis TurboMax</h3>
+                <div class="cs-rating">
+                  <span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span><span class="cs-star"></span>
+                  <span class="cs-rating-value">5.0</span>
+                </div>
+                <p class="cs-address">ul. Mechaników 10, 01-234 Warszawa</p>
+                <span class="cs-category">Motoryzacja</span>
+              </div>
+            </div>
+          </div>
+    
+          <button class="cs-carousel-btn cs-next-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#2c3e50"></polyline></svg>
+          </button>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+    <script src="featured.js"></script>
+    <script src="cards.js"></script>
+
+</body>
+</html>
