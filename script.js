@@ -42,3 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateButtonState();
 });
+
+function goToCompany() {
+    window.location.href = "company.html";
+}
+
+document.querySelectorAll('.cs-service-card').forEach(card => {
+    card.addEventListener('click', () => {
+        goToCompany();
+    });
+  });

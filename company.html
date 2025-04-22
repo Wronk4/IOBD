@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElektroTech - Usługi Elektryczne</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="company.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="search-container">
+            <input type="text" placeholder="Wyszukaj...">
+        </div>
+        
+        <div class="nav-right">
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Zaloguj się</a>
+                <a href="login.html" class="btn btn-register">Zarejestruj się</a>
+            </div>
+            <div class="avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section class="gallery-container">
+            <div class="gallery">
+                <img src="/api/placeholder/800/400" alt="Elektryk przy pracy" class="active">
+                <img src="/api/placeholder/800/400" alt="Instalacja paneli elektrycznych" class="">
+                <img src="/api/placeholder/800/400" alt="Naprawa instalacji elektrycznej" class="">
+                <div class="gallery-buttons">
+                    <button class="gallery-button gallery-prev">❮</button>
+                    <button class="gallery-button gallery-next">❯</button>
+                </div>
+            </div>
+            
+            <div class="company-info">
+                <h2 class="company-name">ElektroTech</h2>
+                
+                <h3>O nas</h3>
+                <p>Jesteśmy profesjonalną firmą elektryczną z ponad 15-letnim doświadczeniem. Oferujemy kompleksowe usługi elektryczne dla domów i firm, gwarantując wysoką jakość i bezpieczeństwo.</p>
+                
+                <div class="rating">
+                    <div class="stars">
+                        <span class="star cs-star"></span>
+                        <span class="star cs-star"></span>
+                        <span class="star cs-star"></span>
+                        <span class="star cs-star"></span>
+                        <span class="star cs-star-half"></span>
+                    </div>
+                    <span class="rating-value">4,5</span>
+                </div>
+                
+                <div class="address">
+                    <p><strong>Adres:</strong> ul. Prądowa 42, 00-123 Warszawa</p>
+                    <p><strong>Telefon:</strong> +48 123 456 789</p>
+                    <p><strong>Email:</strong> kontakt@elektrotech.pl</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tabela usług -->
+        <section class="services">
+            <h2 class="section-title">Nasze Usługi</h2>
+            
+            <div class="appointment-buttons">
+                <button class="appointment-button">Umów usługę online</button>
+            </div>
+            
+            <table class="services-table">
+                <thead>
+                    <tr>
+                        <th>Usługa</th>
+                        <th>Opis</th>
+                        <th>Cena</th>
+                        <th>Czas wykonania</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Instalacja elektryczna</td>
+                        <td>Kompleksowa instalacja elektryczna w nowych budynkach</td>
+                        <td class="price">od 3500 zł</td>
+                        <td class="duration">3-5 dni</td>
+                    </tr>
+                    <tr>
+                        <td>Modernizacja instalacji</td>
+                        <td>Wymiana starej instalacji na nową, bezpieczną i zgodną z normami</td>
+                        <td class="price">od 2800 zł</td>
+                        <td class="duration">2-4 dni</td>
+                    </tr>
+                    <tr>
+                        <td>Montaż oświetlenia</td>
+                        <td>Instalacja oświetlenia wewnętrznego i zewnętrznego</td>
+                        <td class="price">od 800 zł</td>
+                        <td class="duration">1 dzień</td>
+                    </tr>
+                    <tr>
+                        <td>Naprawa awarii</td>
+                        <td>Szybkie i skuteczne usuwanie awarii elektrycznych</td>
+                        <td class="price">od 200 zł</td>
+                        <td class="duration">1-4 godziny</td>
+                    </tr>
+                    <tr>
+                        <td>Instalacja fotowoltaiczna</td>
+                        <td>Montaż i konfiguracja systemu paneli słonecznych</td>
+                        <td class="price">od 15000 zł</td>
+                        <td class="duration">3-5 dni</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Opinie klientów -->
+        <section class="reviews">
+            <h2 class="section-title">Opinie Klientów</h2>
+            
+            <div class="reviews-summary">
+                <div class="average-rating">
+                    <h3>Średnia ocena</h3>
+                    <div class="big-rating">
+                        <div class="stars">
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star-half"></span>
+                        </div>
+                        <span class="rating-value">4,7</span>
+                    </div>
+                    <p>na podstawie 42 opinii</p>
+                </div>
+                
+                <div class="rating-distribution">
+                    <h3>Rozkład ocen</h3>
+                    <div class="rating-bar">
+                        <span class="rating-level">5 ★</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 70%"></div>
+                        </div>
+                        <span class="rating-count">29</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-level">4 ★</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 20%"></div>
+                        </div>
+                        <span class="rating-count">9</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-level">3 ★</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 7%"></div>
+                        </div>
+                        <span class="rating-count">3</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-level">2 ★</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 2%"></div>
+                        </div>
+                        <span class="rating-count">1</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-level">1 ★</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 0%"></div>
+                        </div>
+                        <span class="rating-count">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review">
+                <div class="review-header">
+                    <span class="reviewer">Anna Kowalska</span>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                        </div>
+                        <span class="rating-value">5,0</span>
+                    </div>
+                    <span class="review-date">15.03.2025</span>
+                </div>
+                <p class="review-content">Jestem bardzo zadowolona z usług ElektroTech. Profesjonalna obsługa, szybka realizacja i dokładnie wykonana praca. Polecam każdemu, kto szuka solidnej firmy elektrycznej.</p>
+            </div>
+            
+            <div class="review">
+                <div class="review-header">
+                    <span class="reviewer">Marek Nowak</span>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star-half"></span>
+                        </div>
+                        <span class="rating-value">4,5</span>
+                    </div>
+                    <span class="review-date">02.04.2025</span>
+                </div>
+                <p class="review-content">Korzystałem z usług ElektroTech przy modernizacji instalacji elektrycznej w mieszkaniu. Panowie pracowali szybko i czysto, a jakość wykonania jest na najwyższym poziomie. Cena również konkurencyjna.</p>
+            </div>
+            
+            <div class="review">
+                <div class="review-header">
+                    <span class="reviewer">Katarzyna Wiśniewska</span>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                            <span class="star cs-star"></span>
+                        </div>
+                        <span class="rating-value">5,0</span>
+                    </div>
+                    <span class="review-date">10.04.2025</span>
+                </div>
+                <p class="review-content">Firma zainstalowała nam system fotowoltaiczny i jesteśmy bardzo zadowoleni. Wszystko zostało dokładnie wytłumaczone, a instalacja działa bez zarzutu. Już widzimy oszczędności na rachunkach za prąd.</p>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery img');
+            const prevButton = document.querySelector('.gallery-prev');
+            const nextButton = document.querySelector('.gallery-next');
+            let currentIndex = 0;
+            
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle('active', i === index);
+                });
+            }
+            
+            prevButton.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            });
+            
+            nextButton.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            });
+            
+            setInterval(function() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
