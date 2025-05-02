@@ -5,31 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="featured.css">
     <link rel="stylesheet" href="cards.css">
+
 </head>
 
+
+<nav class="navigation-navbar">
+  <div class="navigation-left">
+      <div class="navigation-button navigation-small" style="cursor: pointer;" onclick="window.location.href='index.html'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+      </div>
+
+      <div class="navigation-search-container">
+          <input type="text" placeholder="Wyszukaj...">
+      </div>
+  </div>
+  
+  <div class="navigation-right" onclick="window.location.href='account.html'">
+      <div class="navigation-auth-buttons">
+          <a href="login.html" class="navigation-btn navigation-btn-login">Zaloguj się</a>
+          <a href="login.html" class="navigation-btn navigation-btn-register">Zarejestruj się</a>
+      </div>
+      <div class="navigation-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+      </div>
+  </div>
+</nav>
+
 <body>
-    <nav class="navbar">
-        <div class="search-container">
-            <input type="text" placeholder="Wyszukaj...">
-        </div>
-        
-        <div class="nav-right">
-            <div class="auth-buttons">
-                <a href="login.html" class="btn btn-login">Zaloguj się</a>
-                <a href="login.html" class="btn btn-register">Zarejestruj się</a>
-            </div>
-            <div class="avatar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-            </div>
-        </div>
-    </nav>
+
 
 
     <h2 class="cs-section-title">Kategorie</h2>

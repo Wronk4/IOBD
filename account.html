@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Użytkownika</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<nav class="navigation-navbar">
+    <div class="navigation-left">
+        <div class="navigation-button navigation-small" style="cursor: pointer;" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        </div>
+  
+        <div class="navigation-search-container">
+            <input type="text" placeholder="Wyszukaj...">
+        </div>
+    </div>
+    
+    <div class="navigation-right" onclick="window.location.href='account.html'">
+        <div class="navigation-auth-buttons">
+            <a href="login.html" class="navigation-btn navigation-btn-login">Zaloguj się</a>
+            <a href="login.html" class="navigation-btn navigation-btn-register">Zarejestruj się</a>
+        </div>
+        <div class="navigation-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </div>
+    </div>
+  </nav>
+
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="profile">
+                <div class="big-avatar">A</div>
+                <div class="profile-info">
+                    <h3>Jan Kowalski</h3>
+                    <p>+48 123 456 789</p>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-item active" data-section="wizyty">Wizyty</div>
+                <div class="menu-item" data-section="konto">Konto</div>
+                <div class="menu-item" data-section="opinie">Opinie</div>
+                <div class="menu-item" data-section="platnosci">Płatności</div>
+                <div class="menu-item" data-section="firma">Moja firma</div>
+                <div class="menu-item" data-section="wizyty-firmy">Kalendarz Firmy</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="content-section active" id="wizyty">
+                <h2>Moje wizyty</h2>
+                <div class="appointments">
+                    <div class="appointment-card">
+                        <div class="appointment-image">
+                            <img src="/api/placeholder/80/80" alt="Logo salonu">
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-company">Salon Fryzjerski "Nowy Look"</div>
+                            <div class="appointment-service">Strzyżenie męskie + modelowanie</div>
+                            <div class="appointment-status status-completed">Status: Zakończona</div>
+                            <div class="appointment-date">Data: 15.04.2025, 14:30</div>
+                            <button class="review-button">Wystaw opinię</button>
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-card">
+                        <div class="appointment-image">
+                            <img src="/api/placeholder/80/80" alt="Logo gabinetu">
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-company">Gabinet Stomatologiczny "DentaMed"</div>
+                            <div class="appointment-service">Przegląd stomatologiczny</div>
+                            <div class="appointment-status status-upcoming">Status: Nadchodząca</div>
+                            <div class="appointment-date">Data: 05.05.2025, 10:00</div>
+                            <button class="review-button" disabled>Wystaw opinię</button>
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-card">
+                        <div class="appointment-image">
+                            <img src="/api/placeholder/80/80" alt="Logo fizjoterapii">
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-company">Fizjoterapia "Zdrowy Kręgosłup"</div>
+                            <div class="appointment-service">Masaż leczniczy</div>
+                            <div class="appointment-status status-completed">Status: Zakończona</div>
+                            <div class="appointment-date">Data: 02.04.2025, 16:15</div>
+                            <button class="review-button">Wystaw opinię</button>
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-card">
+                        <div class="appointment-image">
+                            <img src="/api/placeholder/80/80" alt="Logo warsztatu">
+                        </div>
+                        <div class="appointment-details">
+                            <div class="appointment-company">Warsztat Samochodowy "AutoFix"</div>
+                            <div class="appointment-service">Wymiana opon + wyważanie</div>
+                            <div class="appointment-status status-completed">Status: Zakończona</div>
+                            <div class="appointment-date">Data: 22.03.2025, 09:30</div>
+                            <button class="review-button">Wystaw opinię</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="content-section" id="wizyty-firmy">
+    <h2>Zarządzanie dostępnością usług</h2>
+    
+    <div class="availability-management">
+        <div class="availability-section">
+            <h3>Kalendarz dostępności</h3>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button class="calendar-nav prev-month">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <h4 class="current-month">Maj 2025</h4>
+                    <button class="calendar-nav next-month">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="calendar-days">
+                    <div class="day-header">Pon</div>
+                    <div class="day-header">Wt</div>
+                    <div class="day-header">Śr</div>
+                    <div class="day-header">Czw</div>
+                    <div class="day-header">Pt</div>
+                    <div class="day-header">Sob</div>
+                    <div class="day-header">Nie</div>
+                </div>
+                <div class="calendar-grid">
+                    <!-- Calendar days will be dynamically generated by JavaScript -->
+                    <div class="calendar-day prev-month">28</div>
+                    <div class="calendar-day prev-month">29</div>
+                    <div class="calendar-day prev-month">30</div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day">9</div>
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    <div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day">14</div>
+                    <div class="calendar-day">15</div>
+                    <div class="calendar-day">16</div>
+                    <div class="calendar-day">17</div>
+                    <div class="calendar-day">18</div>
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day active">20</div>
+                    <div class="calendar-day">21</div>
+                    <div class="calendar-day">22</div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day">24</div>
+                    <div class="calendar-day">25</div>
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                    <div class="calendar-day">31</div>
+                    <div class="calendar-day next-month">1</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="availability-section">
+            <div class="day-header-info">
+                <h3>Harmonogram dnia: <span class="selected-date">20 maja 2025</span></h3>
+                <div class="day-controls">
+                    <button class="day-action-btn copy-schedule">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                        </svg>
+                        Kopiuj harmonogram
+                    </button>
+                    <button class="day-action-btn paste-schedule">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                        </svg>
+                        Wklej harmonogram
+                    </button>
+                    <button class="day-action-btn clear-schedule">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 6h18"></path>
+                            <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                        </svg>
+                        Wyczyść dzień
+                    </button>
+                </div>
+            </div>
+            
+            <div class="day-slots-container">
+                <div class="time-slots">
+                    <div class="time-slot-header">Godzina</div>
+                    <div class="time-slot">9:00</div>
+                    <div class="time-slot">9:30</div>
+                    <div class="time-slot">10:00</div>
+                    <div class="time-slot">10:30</div>
+                    <div class="time-slot">11:00</div>
+                    <div class="time-slot">11:30</div>
+                    <div class="time-slot">12:00</div>
+                    <div class="time-slot">12:30</div>
+                    <div class="time-slot">13:00</div>
+                    <div class="time-slot">13:30</div>
+                    <div class="time-slot">14:00</div>
+                    <div class="time-slot">14:30</div>
+                    <div class="time-slot">15:00</div>
+                    <div class="time-slot">15:30</div>
+                    <div class="time-slot">16:00</div>
+                    <div class="time-slot">16:30</div>
+                    <div class="time-slot">17:00</div>
+                    <div class="time-slot">17:30</div>
+                </div>
+                
+                <div class="service-slots">
+                    <div class="service-column">
+                        <div class="service-header">Strzyżenie męskie + modelowanie</div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                    </div>
+                    
+                    <div class="service-column">
+                        <div class="service-header">Strzyżenie damskie + modelowanie</div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                    </div>
+                    
+                    <div class="service-column">
+                        <div class="service-header">Koloryzacja + strzyżenie</div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot available"><input type="checkbox" checked></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                        <div class="service-slot"><input type="checkbox"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="day-actions">
+                <button class="save-day-button">Zapisz harmonogram</button>
+                <button class="bulk-edit-button">Edycja zbiorcza</button>
+            </div>
+        </div>
+        
+        <div class="availability-section">
+            <h3>Ustawienia szablonów</h3>
+            <div class="templates-container">
+                <div class="template-list">
+                    <div class="template-item active">
+                        <div class="template-name">Normalny dzień roboczy</div>
+                        <div class="template-actions">
+                            <button class="apply-template">Zastosuj</button>
+                            <button class="edit-template">Edytuj</button>
+                            <button class="delete-template">Usuń</button>
+                        </div>
+                    </div>
+                    <div class="template-item">
+                        <div class="template-name">Dzień skrócony</div>
+                        <div class="template-actions">
+                            <button class="apply-template">Zastosuj</button>
+                            <button class="edit-template">Edytuj</button>
+                            <button class="delete-template">Usuń</button>
+                        </div>
+                    </div>
+                    <div class="template-item">
+                        <div class="template-name">Weekend</div>
+                        <div class="template-actions">
+                            <button class="apply-template">Zastosuj</button>
+                            <button class="edit-template">Edytuj</button>
+                            <button class="delete-template">Usuń</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="add-template-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Dodaj nowy szablon
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal do zbiorczej edycji -->
+    <div class="bulk-edit-overlay">
+        <div class="bulk-edit-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Zbiorcza edycja dostępności</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="bulk-edit-content">
+                <div class="bulk-edit-options">
+                    <h4>Wybierz usługi do edycji:</h4>
+                    <div class="service-checkboxes">
+                        <label class="service-checkbox">
+                            <input type="checkbox" checked> Strzyżenie męskie + modelowanie
+                        </label>
+                        <label class="service-checkbox">
+                            <input type="checkbox" checked> Strzyżenie damskie + modelowanie
+                        </label>
+                        <label class="service-checkbox">
+                            <input type="checkbox" checked> Koloryzacja + strzyżenie
+                        </label>
+                    </div>
+                    
+                    <h4>Wybierz zakres dat:</h4>
+                    <div class="date-range">
+                        <div class="date-input">
+                            <label>Od:</label>
+                            <input type="date" value="2025-05-01">
+                        </div>
+                        <div class="date-input">
+                            <label>Do:</label>
+                            <input type="date" value="2025-05-31">
+                        </div>
+                    </div>
+                    
+                    <h4>Wybierz dni tygodnia:</h4>
+                    <div class="weekday-selector">
+                        <label class="weekday-checkbox">
+                            <input type="checkbox" checked> Poniedziałek
+                        </label>
+                        <label class="weekday-checkbox">
+                            <input type="checkbox" checked> Wtorek
+                        </label>
+                        <label class="weekday-checkbox">
+                            <input type="checkbox" checked> Środa
+                        </label>
+                        <label class="weekday-checkbox">
+                            <input type="checkbox" checked> Czwartek
+                        </label>
+                        <label class="weekday-checkbox">
+                            <input type="checkbox" checked> Piątek
+                        </label>
+                        <label class="weekday-checkbox">
+                            <input type="checkbox"> Sobota
+                        </label>
+                        <label class="weekday-checkbox">
+                            <input type="checkbox"> Niedziela
+                        </label>
+                    </div>
+                    
+                    <h4>Ustaw dostępność:</h4>
+                    <div class="availability-options">
+                        <label class="radio-option">
+                            <input type="radio" name="availability" value="available" checked> Dostępne
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="availability" value="unavailable"> Niedostępne
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-button">Anuluj</button>
+                <button class="apply-bulk-button">Zastosuj zmiany</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal do edycji szablonu -->
+    <div class="template-edit-overlay">
+        <div class="template-edit-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Edycja szablonu</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="template-edit-content">
+                <div class="form-group">
+                    <label for="template-name">Nazwa szablonu:</label>
+                    <input type="text" id="template-name" class="form-input" value="Normalny dzień roboczy">
+                </div>
+                
+                <h4>Ustaw godziny pracy:</h4>
+                <div class="work-hours">
+                    <div class="work-hour-input">
+                        <label>Od:</label>
+                        <select class="form-select">
+                            <option>7:00</option>
+                            <option>7:30</option>
+                            <option>8:00</option>
+                            <option>8:30</option>
+                            <option selected>9:00</option>
+                            <option>9:30</option>
+                            <option>10:00</option>
+                        </select>
+                    </div>
+                    <div class="work-hour-input">
+                        <label>Do:</label>
+                        <select class="form-select">
+                            <option>16:00</option>
+                            <option>16:30</option>
+                            <option>17:00</option>
+                            <option selected>18:00</option>
+                            <option>18:30</option>
+                            <option>19:00</option>
+                            <option>19:30</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <h4>Przerwa:</h4>
+                <div class="break-hours">
+                    <div class="break-hour-input">
+                        <label>Od:</label>
+                        <select class="form-select">
+                            <option>Brak</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>12:00</option>
+                            <option selected>13:00</option>
+                            <option>13:30</option>
+                            <option>14:00</option>
+                        </select>
+                    </div>
+                    <div class="break-hour-input">
+                        <label>Do:</label>
+                        <select class="form-select">
+                            <option>Brak</option>
+                            <option>13:00</option>
+                            <option selected>14:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                            <option>15:30</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <h4>Dostępne usługi:</h4>
+                <div class="template-services">
+                    <label class="service-checkbox">
+                        <input type="checkbox" checked> Strzyżenie męskie + modelowanie
+                    </label>
+                    <label class="service-checkbox">
+                        <input type="checkbox" checked> Strzyżenie damskie + modelowanie
+                    </label>
+                    <label class="service-checkbox">
+                        <input type="checkbox" checked> Koloryzacja + strzyżenie
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-button">Anuluj</button>
+                <button class="save-template-button">Zapisz szablon</button>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            <!-- Zawartość sekcji "Konto" -->
+<div class="content-section" id="konto">
+    <h2>Moje konto</h2>
+    
+    <div class="account-management">
+        <div class="account-section">
+            <h3>Dane personalne</h3>
+            <div class="profile-edit-container">
+                <div class="avatar-editor">
+                    <div class="current-avatar">
+                        <div class="big-avatar" id="preview-avatar">A</div>
+                    </div>
+                    <div class="avatar-options">
+                        <button class="upload-avatar-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            Wgraj zdjęcie
+                        </button>
+                        <input type="file" id="avatar-upload" class="file-input" accept="image/*" hidden>
+                        
+                        <button class="remove-avatar-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 6h18"></path>
+                                <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                            </svg>
+                            Usuń zdjęcie
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="profile-info-editor">
+                    <form id="profile-form">
+                        <div class="form-group">
+                            <label for="user-name">Imię i nazwisko:</label>
+                            <input type="text" id="user-name" class="form-input" value="Jan Kowalski">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-email">Adres e-mail:</label>
+                            <input type="email" id="user-email" class="form-input" value="jan.kowalski@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-phone">Numer telefonu:</label>
+                            <input type="tel" id="user-phone" class="form-input" value="+48 123 456 789">
+                        </div>
+                        
+                        <button type="submit" class="save-button">Zapisz zmiany</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="account-section">
+            <h3>Zmiana hasła</h3>
+            <form id="password-form" class="password-form">
+                <div class="form-group">
+                    <label for="current-password">Obecne hasło:</label>
+                    <div class="password-input-container">
+                        <input type="password" id="current-password" class="form-input">
+                        <button type="button" class="toggle-password">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="new-password">Nowe hasło:</label>
+                    <div class="password-input-container">
+                        <input type="password" id="new-password" class="form-input">
+                        <button type="button" class="toggle-password">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Potwierdź nowe hasło:</label>
+                    <div class="password-input-container">
+                        <input type="password" id="confirm-password" class="form-input">
+                        <button type="button" class="toggle-password">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="password-requirements">
+                    <h4>Hasło musi zawierać:</h4>
+                    <ul>
+                        <li id="length-check">Minimum 8 znaków</li>
+                        <li id="uppercase-check">Przynajmniej jedną dużą literę</li>
+                        <li id="lowercase-check">Przynajmniej jedną małą literę</li>
+                        <li id="number-check">Przynajmniej jedną cyfrę</li>
+                        <li id="special-check">Przynajmniej jeden znak specjalny</li>
+                    </ul>
+                </div>
+                
+                <button type="submit" class="save-button">Zmień hasło</button>
+            </form>
+        </div>
+        
+        <div class="account-section">
+            <h3>Preferencje powiadomień</h3>
+            <form id="notifications-form" class="notifications-form">
+                <div class="notification-option">
+                    <input type="checkbox" id="email-notifications" class="toggle-input" checked>
+                    <label for="email-notifications" class="toggle-label"></label>
+                    <div class="notification-info">
+                        <h4>Powiadomienia e-mail</h4>
+                        <p>Otrzymuj powiadomienia o nadchodzących wizytach, zmianach i nowych funkcjach.</p>
+                    </div>
+                </div>
+                
+                <div class="notification-option">
+                    <input type="checkbox" id="sms-notifications" class="toggle-input" checked>
+                    <label for="sms-notifications" class="toggle-label"></label>
+                    <div class="notification-info">
+                        <h4>Powiadomienia SMS</h4>
+                        <p>Otrzymuj przypomnienia SMS o nadchodzących wizytach.</p>
+                    </div>
+                </div>
+                
+                <div class="notification-option">
+                    <input type="checkbox" id="marketing-notifications" class="toggle-input">
+                    <label for="marketing-notifications" class="toggle-label"></label>
+                    <div class="notification-info">
+                        <h4>Materiały marketingowe</h4>
+                        <p>Otrzymuj informacje o promocjach i specjalnych ofertach.</p>
+                    </div>
+                </div>
+                
+                <button type="submit" class="save-button">Zapisz preferencje</button>
+            </form>
+        </div>
+    </div>
+</div>
+            
+            <div class="content-section" id="opinie">
+                <h2>Moje opinie</h2>
+                <div class="opinions">
+                    <div class="opinion-card">
+                        <div class="opinion-image">
+                            <img src="/api/placeholder/80/80" alt="Logo firmy">
+                        </div>
+                        <div class="opinion-details">
+                            <div class="opinion-company">Salon Fryzjerski "Nowy Look"</div>
+                            <div class="opinion-service">Strzyżenie męskie + modelowanie</div>
+                            <div class="opinion-date">Wystawiono: 17.04.2025</div>
+                            <div class="stars-rating">
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="opinion-text">
+                                Profesjonalna obsługa i świetne strzyżenie. Stylistka dokładnie zrozumiała, o co mi chodziło. Polecam!
+                            </div>
+                            <button class="edit-button">Edytuj opinię</button>
+                        </div>
+                    </div>
+                    
+                    <div class="opinion-card">
+                        <div class="opinion-image">
+                            <img src="/api/placeholder/80/80" alt="Logo firmy">
+                        </div>
+                        <div class="opinion-details">
+                            <div class="opinion-company">Fizjoterapia "Zdrowy Kręgosłup"</div>
+                            <div class="opinion-service">Masaż leczniczy</div>
+                            <div class="opinion-date">Wystawiono: 05.04.2025</div>
+                            <div class="stars-rating">
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="opinion-text">
+                                Najlepszy masaż, jaki kiedykolwiek miałem. Pan Marek ma niezwykłe wyczucie i wiedzę. Po jednej wizycie poczułem znaczną ulgę w plecach. Z pewnością wrócę na kolejne zabiegi.
+                            </div>
+                            <button class="edit-button">Edytuj opinię</button>
+                        </div>
+                    </div>
+                    
+                    <div class="opinion-card">
+                        <div class="opinion-image">
+                            <img src="/api/placeholder/80/80" alt="Logo firmy">
+                        </div>
+                        <div class="opinion-details">
+                            <div class="opinion-company">Warsztat Samochodowy "AutoFix"</div>
+                            <div class="opinion-service">Wymiana opon + wyważanie</div>
+                            <div class="opinion-date">Wystawiono: 25.03.2025</div>
+                            <div class="stars-rating">
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star selected">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="opinion-text">
+                                Usługa wykonana sprawnie i szybko. Jedyny minus to brak możliwości płatności kartą.
+                            </div>
+                            <button class="edit-button">Edytuj opinię</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section" id="firma">
+                <h2>Zarządzanie informacjami o firmie</h2>
+                
+                <div class="company-management">
+                    <div class="company-section">
+                        <h3>Informacje podstawowe</h3>
+                        <form class="company-form">
+                            <div class="form-group">
+                                <label for="companyName">Nazwa firmy:</label>
+                                <input type="text" id="companyName" class="form-input" value="Salon Fryzjerski 'Nowy Look'">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="companyAddress">Adres:</label>
+                                <input type="text" id="companyAddress" class="form-input" value="ul. Kwiatowa 12, 33-100 Tarnów">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="companyPhone">Telefon:</label>
+                                <input type="text" id="companyPhone" class="form-input" value="+48 123 456 789">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="companyDescription">Opis:</label>
+                                <textarea id="companyDescription" class="form-textarea" rows="4">Salon fryzjerski oferujący pełen zakres usług fryzjerskich dla kobiet i mężczyzn. Specjalizujemy się w strzyżeniu, koloryzacji oraz nowoczesnych technikach stylizacji włosów.</textarea>
+                            </div>
+                            
+                            <button type="submit" class="save-button">Zapisz zmiany</button>
+                        </form>
+                    </div>
+                    
+                    <div class="company-section">
+                        <h3>Galeria zdjęć</h3>
+                        <div class="gallery-manager">
+                            <div class="gallery-preview">
+                                <div class="gallery-item">
+                                    <img src="/api/placeholder/120/80" alt="Zdjęcie 1">
+                                    <div class="gallery-item-actions">
+                                        <button class="delete-image-btn" title="Usuń zdjęcie">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M3 6h18"></path>
+                                                <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="/api/placeholder/120/80" alt="Zdjęcie 2">
+                                    <div class="gallery-item-actions">
+                                        <button class="delete-image-btn" title="Usuń zdjęcie">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M3 6h18"></path>
+                                                <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="/api/placeholder/120/80" alt="Zdjęcie 3">
+                                    <div class="gallery-item-actions">
+                                        <button class="delete-image-btn" title="Usuń zdjęcie">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M3 6h18"></path>
+                                                <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="gallery-item add-image">
+                                    <div class="add-image-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg>
+                                        <span>Dodaj zdjęcie</span>
+                                    </div>
+                                    <input type="file" id="uploadImage" class="file-input" accept="image/*" multiple>
+                                </div>
+                            </div>
+                            <div class="gallery-tips">
+                                <p>Zalecany rozmiar zdjęć: 1200 x 800 pikseli</p>
+                                <p>Maksymalny rozmiar pliku: 5MB</p>
+                                <p>Dozwolone formaty: JPG, PNG</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="company-section services-section">
+                        <h3>Lista usług</h3>
+                        <div class="services-list">
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <div class="service-header">
+                                        <input type="text" class="service-name" value="Strzyżenie męskie + modelowanie">
+                                        <div class="service-actions">
+                                            <button class="delete-service-btn" title="Usuń usługę">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <textarea class="service-description">Profesjonalne strzyżenie męskie wraz z modelowaniem włosów według najnowszych trendów.</textarea>
+                                    <div class="service-details-row">
+                                        <div class="service-price-container">
+                                            <label>Cena:</label>
+                                            <div class="price-input-container">
+                                                <input type="number" class="service-price" value="60">
+                                                <span class="price-currency">zł</span>
+                                            </div>
+                                        </div>
+                                        <div class="service-time-container">
+                                            <label>Czas wykonania:</label>
+                                            <div class="time-input-container">
+                                                <input type="number" class="service-time" value="30">
+                                                <span class="time-unit">min</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <div class="service-header">
+                                        <input type="text" class="service-name" value="Strzyżenie damskie + modelowanie">
+                                        <div class="service-actions">
+                                            <button class="delete-service-btn" title="Usuń usługę">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <textarea class="service-description">Kompleksowe strzyżenie damskie z modelowaniem dostosowanym do kształtu twarzy i typu włosów.</textarea>
+                                    <div class="service-details-row">
+                                        <div class="service-price-container">
+                                            <label>Cena:</label>
+                                            <div class="price-input-container">
+                                                <input type="number" class="service-price" value="80">
+                                                <span class="price-currency">zł</span>
+                                            </div>
+                                        </div>
+                                        <div class="service-time-container">
+                                            <label>Czas wykonania:</label>
+                                            <div class="time-input-container">
+                                                <input type="number" class="service-time" value="45">
+                                                <span class="time-unit">min</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="service-item">
+                                <div class="service-details">
+                                    <div class="service-header">
+                                        <input type="text" class="service-name" value="Koloryzacja + strzyżenie">
+                                        <div class="service-actions">
+                                            <button class="delete-service-btn" title="Usuń usługę">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <textarea class="service-description">Profesjonalna koloryzacja włosów z użyciem najwyższej jakości produktów, zakończona strzyżeniem i modelowaniem.</textarea>
+                                    <div class="service-details-row">
+                                        <div class="service-price-container">
+                                            <label>Cena:</label>
+                                            <div class="price-input-container">
+                                                <input type="number" class="service-price" value="160">
+                                                <span class="price-currency">zł</span>
+                                            </div>
+                                        </div>
+                                        <div class="service-time-container">
+                                            <label>Czas wykonania:</label>
+                                            <div class="time-input-container">
+                                                <input type="number" class="service-time" value="120">
+                                                <span class="time-unit">min</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="add-service-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                Dodaj nową usługę
+                            </button>
+                        </div>
+                        <button type="button" class="save-services-button">Zapisz usługi</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="platnosci">
+                <h2>Moje płatności</h2>
+                <p>Tutaj będą informacje o płatnościach.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popup do wystawiania opinii -->
+    <div class="review-popup-overlay">
+        <div class="review-popup">
+            <div class="popup-header">
+                <h3 class="popup-title">Wystaw opinię</h3>
+                <button class="close-popup">&times;</button>
+            </div>
+            <div class="popup-company">Nazwa firmy</div>
+            <div class="popup-service">Nazwa usługi</div>
+            <div class="rating-container">
+                <div class="rating-title">Twoja ocena:</div>
+                <div class="stars-container">
+                    <div class="star" data-value="1">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                        </svg>
+                    </div>
+                    <div class="star" data-value="2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                        </svg>
+                    </div>
+                    <div class="star" data-value="3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                        </svg>
+                    </div>
+                    <div class="star" data-value="4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                        </svg>
+                    </div>
+                    <div class="star" data-value="5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M288 0L359.5 176.3l176.3 25.5-128 124.2L441.1 512 288 426.3 134.9 512l33.3-185.9-128-124.2 176.3-25.5L288 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="rating-value">Wybrana ocena: <span class="selected-rating">0</span>/5</div>
+            </div>
+            <form class="review-form">
+                <div class="form-group">
+                    <label for="reviewText" class="form-label">Twoja opinia:</label>
+                    <textarea id="reviewText" class="form-textarea" placeholder="Napisz swoją opinię..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-button">Anuluj</button>
+                    <button type="submit" class="submit-button">Wyślij opinię</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="account.js"></script>
+    <script src="edit_company.js"></script>
+    <script src="edit_account.js"></script>
+    <script src="edit_calendar.js"></script>
+
+</body>
+</html>

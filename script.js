@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextButton = document.querySelector('.next-button');
     const items = document.querySelectorAll('.category-item');
 
-    const itemWidth = 180; // szerokość elementu + margines
+    const itemWidth = 180;
     let visibleItems = Math.floor(slider.offsetWidth / itemWidth);
     let currentPosition = 0;
     let maxPosition = items.length - visibleItems;

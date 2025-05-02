@@ -8,26 +8,35 @@
     <link rel="stylesheet" href="company.css">
 </head>
 
-<body>
-
-    <nav class="navbar">
-        <div class="search-container">
+<nav class="navigation-navbar">
+    <div class="navigation-left">
+        <div class="navigation-button navigation-small" style="cursor: pointer;" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        </div>
+  
+        <div class="navigation-search-container">
             <input type="text" placeholder="Wyszukaj...">
         </div>
-        
-        <div class="nav-right">
-            <div class="auth-buttons">
-                <a href="login.html" class="btn btn-login">Zaloguj się</a>
-                <a href="login.html" class="btn btn-register">Zarejestruj się</a>
-            </div>
-            <div class="avatar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-            </div>
+    </div>
+    
+    <div class="navigation-right" onclick="window.location.href='account.html'">
+        <div class="navigation-auth-buttons">
+            <a href="login.html" class="navigation-btn navigation-btn-login">Zaloguj się</a>
+            <a href="login.html" class="navigation-btn navigation-btn-register">Zarejestruj się</a>
         </div>
-    </nav>
+        <div class="navigation-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </div>
+    </div>
+  </nav>
+
+<body>
     
     <div class="container">
         <section class="gallery-container">
@@ -233,35 +242,113 @@
             </div>
         </section>
     </div>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.gallery img');
-            const prevButton = document.querySelector('.gallery-prev');
-            const nextButton = document.querySelector('.gallery-next');
-            let currentIndex = 0;
-            
-            function showImage(index) {
-                images.forEach((img, i) => {
-                    img.classList.toggle('active', i === index);
-                });
-            }
-            
-            prevButton.addEventListener('click', function() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                showImage(currentIndex);
-            });
-            
-            nextButton.addEventListener('click', function() {
-                currentIndex = (currentIndex + 1) % images.length;
-                showImage(currentIndex);
-            });
-            
-            setInterval(function() {
-                currentIndex = (currentIndex + 1) % images.length;
-                showImage(currentIndex);
-            }, 5000);
-        });
-    </script>
-</body>
-</html>
+
+
+<!-- HTML dla popup -->
+<div id="appointment-popup" class="popup-overlay">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        
+        <h2>Umów termin wizyty</h2>
+        
+        <div class="service-selection">
+            <label for="service-select">Wybierz usługę:</label>
+            <select id="service-select" class="service-dropdown">
+                <option value="instalacja">Instalacja elektryczna</option>
+                <option value="modernizacja">Modernizacja instalacji</option>
+                <option value="oswietlenie">Montaż oświetlenia</option>
+                <option value="naprawa">Naprawa awarii</option>
+                <option value="fotowoltaika">Instalacja fotowoltaiczna</option>
+            </select>
+        </div>
+        
+        <div class="service-details">
+            <p class="service-price">Cena: <span id="selected-price">od 3500 zł</span></p>
+            <p class="service-duration">Czas wykonania: <span id="selected-duration">3-5 dni</span></p>
+        </div>
+        
+        <div class="appointment-calendar">
+            <div class="calendar-month">Kwiecień 2025</div>
+            <div class="calendar-grid">
+                <div class="calendar-weekday">Pon</div>
+                <div class="calendar-weekday">Wt</div>
+                <div class="calendar-weekday">Śr</div>
+                <div class="calendar-weekday">Czw</div>
+                <div class="calendar-weekday">Pt</div>
+                <div class="calendar-weekday">Sob</div>
+                <div class="calendar-weekday">Nd</div>
+                
+                <div class="calendar-day unavailable">1</div>
+                <div class="calendar-day unavailable">2</div>
+                <div class="calendar-day unavailable">3</div>
+                <div class="calendar-day unavailable">4</div>
+                <div class="calendar-day unavailable">5</div>
+                <div class="calendar-day unavailable">6</div>
+                <div class="calendar-day unavailable">7</div>
+                
+                <div class="calendar-day unavailable">8</div>
+                <div class="calendar-day unavailable">9</div>
+                <div class="calendar-day available">10</div>
+                <div class="calendar-day available">11</div>
+                <div class="calendar-day unavailable">12</div>
+                <div class="calendar-day unavailable">13</div>
+                <div class="calendar-day unavailable">14</div>
+                
+                <div class="calendar-day unavailable">15</div>
+                <div class="calendar-day available">16</div>
+                <div class="calendar-day available">17</div>
+                <div class="calendar-day unavailable">18</div>
+                <div class="calendar-day unavailable">19</div>
+                <div class="calendar-day unavailable">20</div>
+                <div class="calendar-day unavailable">21</div>
+                
+                <div class="calendar-day available">22</div>
+                <div class="calendar-day available">23</div>
+                <div class="calendar-day unavailable">24</div>
+                <div class="calendar-day unavailable">25</div>
+                <div class="calendar-day available">26</div>
+                <div class="calendar-day available">27</div>
+                <div class="calendar-day unavailable">28</div>
+                
+                <div class="calendar-day available">29</div>
+                <div class="calendar-day available">30</div>
+            </div>
+            <div class="calendar-legend">
+                <div class="legend-item">
+                    <div class="legend-color legend-available"></div>
+                    <span>Dostępne terminy</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color legend-unavailable"></div>
+                    <span>Zajęte terminy</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="selected-date-container">
+            <p class="selected-date-label">Wybrany termin: <span id="selected-date">nie wybrano</span></p>
+        </div>
+        
+        <div class="time-selection-container">
+            <label for="time-select">Wybierz godzinę:</label>
+            <select id="time-select" class="time-dropdown">
+                <option value="">-- Wybierz godzinę --</option>
+                <option value="8:00">8:00</option>
+                <option value="9:00">9:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+            </select>
+        </div>
+        
+        <button id="submit-appointment" class="appointment-submit-button">Umów wizytę</button>
+    </div>
+</div>
+
+<script src="company.js"></script>
