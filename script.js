@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     updateButtonState();
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            window.location.href = "search.html";
+        });
+    });
 });
 
 function goToCompany() {
